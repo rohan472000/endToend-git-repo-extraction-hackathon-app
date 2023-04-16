@@ -7,41 +7,33 @@ Displays the retrieved data in a user-friendly format using HTML and CSS.
 Allows users to easily interact with the application through a web browser.
 
 ## Technologies Used
--- Flask: a web framework for Python.
--- Python: a programming language used for backend server-side development.
--- HTML: a markup language for building web pages.
--- CSS: a stylesheet language used for styling web pages.
+- Flask: a web framework for Python.
+- Python: a programming language used for backend server-side development.
+- HTML: a markup language for building web pages.
+- CSS: a stylesheet language used for styling web pages.
 
 ## Getting Started
 Follow the steps below to set up and run the application on your local machine:
 
---Clone the repository:
+-Clone the repository:
 
-```bash
-Copy code
+```bashCopy code
 git clone https://github.com/yourusername/github-data-extractor.git
-Navigate to the project directory:
 ```
 
 ```bash
-Copy code
 cd github-data-extractor
-Install dependencies:
 ```
 
 ```bash
-Copy code
 pip install -r requirements.txt
-Start the Flask development server:
 ```
 
 ```bash
-Copy code
 python app.py
-Open a web browser:
 ```
 
---Open a web browser and go to http://localhost:5000 to access the application.
+- Open a web browser and go to http://localhost:5000 to access the application.
 
 
 ## Usage
@@ -52,10 +44,10 @@ Users can view the retrieved data, such as profile information, repositories, fo
 ## Contributing
 If you'd like to contribute to this project, please follow these steps:
 
---Fork the repository
---Create a new branch
---Make changes and test thoroughly
---Create a pull request describing the changes made
+- Fork the repository
+- Create a new branch
+- Make changes and test thoroughly
+-  Create a pull request describing the changes made
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
