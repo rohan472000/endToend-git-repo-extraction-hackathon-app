@@ -1,6 +1,9 @@
 # GitHub Data Extractor
 This is a web application built with Flask, Python, HTML, and CSS that allows users to extract GitHub data by providing a username.
 
+![Screenshot (169)](https://user-images.githubusercontent.com/96521078/232286124-76ed9937-ed9a-41e3-b1b3-2a09376c3aa9.png)
+![Screenshot (170)](https://user-images.githubusercontent.com/96521078/232286161-f6667487-8c72-44e9-a971-3e3d7228a968.png)
+
 ## Features
 Fetches GitHub user data such as profile information, repositories, followers, and following.
 Displays the retrieved data in a user-friendly format using HTML and CSS.
