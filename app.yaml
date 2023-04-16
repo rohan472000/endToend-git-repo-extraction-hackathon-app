@@ -1,0 +1,16 @@
+# apiVersion: core.oam.dev/v1beta1
+# kind: Application
+# metadata:
+#   name: roh-repo-extraction
+#   annotations:
+#     description: "extraction git data"
+#     version: "0.1"    
+# spec:
+#   components:
+#     - name: roh-repo-extraction
+#       type: webservice
+#       properties:
+#         image: rohan03anand/roh-repo-extraction:latest
+#         ports:
+#           - port: 80
+#             expose: true
