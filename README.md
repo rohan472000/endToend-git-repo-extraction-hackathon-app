@@ -15,7 +15,6 @@ Allows users to easily interact with the application through a web browser.
 ## Getting Started
 Follow the steps below to set up and run the application on your local machine:
 
--Clone the repository:
 
 ```bashCopy code
 git clone https://github.com/yourusername/github-data-extractor.git
