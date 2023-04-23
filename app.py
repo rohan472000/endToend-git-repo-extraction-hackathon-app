@@ -1,3 +1,7 @@
+"""
+This is a simple Flask application that fetches the 100 most rated
+public repositories for a GitHub user and displays them on a webpage.
+"""
 from datetime import datetime
 import requests
 from flask import Flask, render_template, request
