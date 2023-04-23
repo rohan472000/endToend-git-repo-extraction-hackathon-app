@@ -1,17 +1,23 @@
+from datetime import datetime
 import requests
 from flask import Flask, render_template, request
-from datetime import datetime
 
 app = Flask(__name__, template_folder='template')
 
 
 @app.route('/')
 def index():
+    """
+    Render the index.html template
+    """
     return render_template('index.html')
 
 
 @app.route('/fetch', methods=['POST'])
 def fetch():
+    """
+    Fetch the 100 most rated public repositories for a GitHub user and render the output.html template with the data
+    """
     # Get the GitHub username from the form data
     github_username = request.form['username']
 
@@ -32,7 +38,6 @@ def fetch():
         for repo in data:
             # Extract the repository data we want
             name = repo["name"]
-            # description = repo["description"]
             stars = repo["stargazers_count"]
             forks = repo["forks_count"]
             language = repo["language"]
@@ -43,9 +48,9 @@ def fetch():
 
         # Render the output.html template with the repository data
         return render_template('output.html', repos_data=repos_data)
-    else:
-        # If the response is not successful, return an error message
-        return f"Error: {response.status_code} - {response.json()['message']}"
+
+    # If the response is not successful, return an error message
+    return f"Error: {response.status_code} - {response.json()['message']}"
 
 
 if __name__ == '__main__':
