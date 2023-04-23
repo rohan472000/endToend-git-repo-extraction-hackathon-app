@@ -9,6 +9,9 @@ app = Flask(__name__, template_folder='template')
 def index():
     """
     Render the index.html template
+
+    Returns:
+        rendered template
     """
     return render_template('index.html')
 
@@ -16,17 +19,20 @@ def index():
 @app.route('/fetch', methods=['POST'])
 def fetch():
     """
-    Fetch the 100 most rated public repositories for a GitHub 
-    user and render the output.html template with the data
+    Fetch the 100 most rated public repositories for a GitHub user 
+    and render the output.html template with the data
+
+    Returns:
+        rendered template with repository data or an error message
     """
     # Get the GitHub username from the form data
     github_username = request.form['username']
 
-    """ Make a request to the GitHub API to get the 100 most 
-    rated public repositories for the given username
-    """
+    # Make a request to the GitHub API to get the 100 most
+    # rated public repositories for the given username
     response = requests.get(
-        f"https://api.github.com/users/{github_username}/repos?sort=stars&per_page=100"
+        f"https://api.github.com/users/{github_username}/repos?sort=stars&per_page=100",
+        timeout=10
     )
 
     # Check if the response is successful (status code 200)
