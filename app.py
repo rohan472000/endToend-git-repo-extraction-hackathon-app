@@ -16,12 +16,15 @@ def index():
 @app.route('/fetch', methods=['POST'])
 def fetch():
     """
-    Fetch the 100 most rated public repositories for a GitHub user and render the output.html template with the data
+    Fetch the 100 most rated public repositories for a GitHub 
+    user and render the output.html template with the data
     """
     # Get the GitHub username from the form data
     github_username = request.form['username']
 
-    # Make a request to the GitHub API to get the 100 most rated public repositories for the given username
+    """ Make a request to the GitHub API to get the 100 most 
+    rated public repositories for the given username
+    """
     response = requests.get(
         f"https://api.github.com/users/{github_username}/repos?sort=stars&per_page=100"
     )
