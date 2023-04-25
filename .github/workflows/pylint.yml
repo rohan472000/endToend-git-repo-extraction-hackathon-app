@@ -3,7 +3,7 @@ name: Pylint
 # on: [push]
 on:
   push:
-  pull_request:
+  pull_request_target:
   
 jobs:
   build:
